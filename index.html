@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Super Shop Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background-image: url('images/super_shop_banner.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); 
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .about,
+        .login-container {
+            position: relative;
+            z-index: 10;
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+            background-color: #fff;
+            animation: slideUp 1s ease-in-out;
+            text-align: center;
+        }
+
+        slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .login-container {
+            max-width: 400px;
+            padding: 40px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .login-container h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .form-options a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        .form-options a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-login {
+            padding: 10px 20px;
+            border: 2px solid #007bff;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-login:hover {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Welcome to Super Shop Management</h1>
+    </div>
+
+    <div class="about">
+        <h2>Efficient Inventory, Sales, and Customer Management</h2>
+        <p>Our Super Shop Management System helps you keep track of products, customers, and sales in a streamlined and intuitive way. Ideal for busy retail environments, our platform ensures every transaction is smooth and every product is accounted for.</p>
+    </div>
+
+    <div class="login-container">
+        <h3>Login to Continue</h3>
+        <form action="login.php" method="post">
+            <input type="text" name="username" placeholder="Enter Username" required>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <div class="form-options">
+                <a href="forgot_password.php">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn-login">Login</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+Username: admin; role: admin
+password: 123456
+
+Username: staff; role: staff
+password: 123
